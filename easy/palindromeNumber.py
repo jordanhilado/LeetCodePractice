@@ -1,5 +1,4 @@
 # 9. Palindrome Number
-# Difficulty: Easy
 # https://leetcode.com/problems/palindrome-number/
 
 def isPalindrome(self, x: int) -> bool:
