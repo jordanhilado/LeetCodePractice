@@ -16,10 +16,10 @@ def reorganizeString(self, s: str) -> str:
         y = heapq.heappop(heap)
         # add first two items to answer
         ans.extend([x[1],y[1]])
-        # if the frequency of the first pop is less than -1, push back the decremented value
+        # if the frequency of the first pop is greater than 1, push back the decremented value
         if x[0]<-1:
             heapq.heappush(heap,(x[0]+1,x[1]))
-        # if the frequency of the second pop is less than -1, push back the decremented value
+        # if the frequency of the second pop is greater than 1, push back the decremented value
         if y[0]<-1:
             heapq.heappush(heap,(y[0]+1,y[1]))
     if heap:
