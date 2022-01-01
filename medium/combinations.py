@@ -3,7 +3,6 @@
 
 def combine(self, n: int, k: int) -> List[List[int]]:
     ans = []
-    
     def backtrack(remain, comb, nex):
         if remain == 0:
             ans.append(comb.copy())
