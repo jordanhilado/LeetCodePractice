@@ -12,5 +12,4 @@ def maxArea(self, height: List[int]) -> int:
         else:
             ans = max(ans, width * height[r])
             r -= 1
-        print("j")
     return ans
