@@ -3,7 +3,6 @@
 
 def numIslands(self, grid: List[List[str]]) -> int:
     ctr = 0
-    
     def fill(grid, row, col):
         if grid[row][col] == "0":
             return
@@ -12,7 +11,6 @@ def numIslands(self, grid: List[List[str]]) -> int:
         for x, y in dirs:
             if 0 <= row + x < len(grid) and 0 <= col + y < len(grid[row + x]):
                 fill(grid, row + x, col + y)
-                
     for i in range(len(grid)):
         for j in range(len(grid[i])):
             if grid[i][j] == "1":

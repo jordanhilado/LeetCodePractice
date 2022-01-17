@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/longest-increasing-subsequence/
 # 300. Longest Increasing Subsequence
 
-#################### DYNAMIC PROGRAMMING ####################
+#################### Dynamic Programming ####################
 
 def lengthOfLIS(self, nums: List[int]) -> int:
     n = len(nums)
@@ -12,7 +12,7 @@ def lengthOfLIS(self, nums: List[int]) -> int:
                 dp[i] = max(dp[i], 1 + dp[j])
     return max(dp)
 
-#################### BINARY SEARCH ####################
+#################### Binary Search ####################
 
 def lengthOfLIS(self, nums: List[int]) -> int:
     temp = [nums[0]]
