@@ -1,6 +1,33 @@
 # 146. LRU Cache
 # https://leetcode.com/problems/lru-cache/
 
+#################### OrderedDict() Solution ####################
+
+class LRUCache:
+    
+    def __init__(self, capacity: int):
+        self.dic = collections.OrderedDict()
+        self.remain = capacity
+
+    def get(self, key: int) -> int:
+        if key not in self.dic:
+            return -1
+        poppedVal = self.dic.pop(key)
+        self.dic[key] = poppedVal
+        return poppedVal
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.dic:
+            self.dic.pop(key)
+        else:
+            if self.remain > 0:
+                self.remain -= 1
+            else:
+                self.dic.popitem(last=False)
+        self.dic[key] = value
+
+#################### Doubly-Linked List Solution ####################
+
 class Node:
     def __init__(self, key, val):
         self.key, self.val = key, val
