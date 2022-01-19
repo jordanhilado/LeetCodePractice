@@ -14,5 +14,3 @@ def cloneGraph(self, node: 'Node') -> 'Node':
                 stack.append(i)
             d[i].neighbors.append(d[curr])
     return d[node]
-    copy = Node()
-    print(node.neighbors)
